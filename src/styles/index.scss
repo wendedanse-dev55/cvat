@@ -1,0 +1,91 @@
+@import "normalizes";
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.layout {
+  height: 100vh;
+  .ant-layout-sider-children {
+    ul {
+      background: transparent;
+    }
+  }
+  .demo-logo-vertical {
+    color: #161616;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .ant-layout-sider {
+    padding: 10px 20px;
+    background: #fff;
+    width: 250px!important;
+    min-width: 250px!important;
+    max-width: 250px!important;
+  }
+}
+
+
+.dropzone-file {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px dashed #0070FF;
+  background: #E0EDF6;
+  height: 110px;
+  svg {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    fill: #0070FF;
+  }
+}
+
+.training-section {
+  padding: 0 20px;
+}
+.training-tabs {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.training-back {
+  display: flex;
+  align-items: center;
+}
+
+.training-title {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+
+.json-config {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F2F6F9;
+  }
+}
+
+
+.testing-scalars {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
