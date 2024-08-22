@@ -85,7 +85,7 @@ const Detail = () => {
                     <iframe
                         id="inlineFrameExample"
                         title="Inline Frame Example"
-                        width="100%" height={heightTensorFlow} src="http://147.45.245.44:6007/#scalars" />
+                        width="100%" height={heightTensorFlow} src="https://tensorboard.mlserver.inf.2up.dev/#timeseries" />
                 </div>}
 
 
@@ -97,7 +97,7 @@ const Detail = () => {
                     <iframe
                         id="inlineFrameExample"
                         title="Inline Frame Example"
-                        width="100%" height={heightTensorFlow} src="http://147.45.245.44:6007/#scalars" />
+                        width="100%" height={heightTensorFlow} src="https://tensorboard.mlserver.inf.2up.dev/#timeseries" />
                 </div> : <Testings isTest={true} setScalarsTitle={setScalarsTitle} />}
             </div>
 
