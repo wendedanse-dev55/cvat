@@ -1,14 +1,13 @@
 import {useCallback, useState} from 'react';
 import {useDropzone} from "react-dropzone";
 import { UploadOutlined } from "@ant-design/icons"
-const Dropzone = ({ handleChange }) => {
+const Dropzone = ({ handleChange, title, name, multiple = false }) => {
     const [file, setFile] = useState(null)
     const onDrop = useCallback(acceptedFiles => {
-        handleChange(acceptedFiles[0], 'settings_file')
-        setFile(acceptedFiles[0])
+        handleChange(multiple ? acceptedFiles : acceptedFiles[0], name || 'settings_file')
+        setFile(multiple ? acceptedFiles : acceptedFiles[0])
     }, [])
-    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
-
+    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop, multiple})
     return (
         <div {...getRootProps()}>
             <input {...getInputProps()} />
@@ -20,7 +19,7 @@ const Dropzone = ({ handleChange }) => {
                     </div> :
                     <div className="dropzone-file">
                         <UploadOutlined  />
-                        <div>{file ? `${file.name}` : 'Add JSON config'}</div>
+                        <div>{Array.isArray(file) ? file.map(i => i.name).join(", "): file ? `${file.name}` : title || 'Add JSON config'}</div>
                     </div>
             }
         </div>
